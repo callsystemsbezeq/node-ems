@@ -154,7 +154,7 @@ LIBS := \
 	-lcrypto \
 	-lz \
 	-lpthread \
-	-L$(EMS_HOME)/lib
+	-L$(EMS_HOME)/lib/64
 
 $(builddir)/node-ems.node: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
 $(builddir)/node-ems.node: LIBS := $(LIBS)
