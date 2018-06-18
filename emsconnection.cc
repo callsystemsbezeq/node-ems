@@ -368,7 +368,7 @@ void EmsConnection::requestFromDestinationSync(bool useTopic,const FunctionCallb
 
   /* listen for response */
   tibemsTextMsg response_msg =NULL;
-  status = tibemsMsgConsumer_ReceiveTimeout(consumer,&response_msg,50000);
+  status = tibemsMsgConsumer_ReceiveTimeout(consumer,&response_msg,10000);
   if (status == TIBEMS_TIMEOUT){
     isolate->ThrowException(Exception::TypeError(String::NewFromUtf8(isolate, "waiting for response timed out")));
     return;
